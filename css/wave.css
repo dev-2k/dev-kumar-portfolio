@@ -1,0 +1,48 @@
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(1.0deg) } 
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+}
+
+.skill-img{
+    border-radius: 10%;
+}
+
+.animated-text span {
+    display: none;
+    line-height: 1;
+  }
+  
+  .animated-text span.active {
+    display: inline;
+  }
+  
+  .animated-text:after {
+    content: ".";
+    display: inline;
+    width: 6px;
+    text-indent: 0;
+    /* overflow: hidden; */
+    background: var(--col-icon);
+    animation: blink 0.3s infinite alternate;
+  }
+
+  .datawords{
+    white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
